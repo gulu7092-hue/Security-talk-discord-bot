@@ -60,7 +60,6 @@ def update_friendliness(user_id: int, change: int):
  print(f"[Friendliness] {user_id}: {current} → {new_score}")
 
 def get_bot_tone(score: int) -> dict:
- """Retourne le ton du bot selon le score"""
 def get_bot_tone(score: int) -> dict:
     """Retourne le ton du bot selon le score"""
     if score >= 80:
@@ -93,6 +92,25 @@ def get_bot_tone(score: int) -> dict:
             "greeting": "Quoi",
             "response": "Entendu",
             "confused": "Noté.",
+            "help": "Parle clairement."
+        }
+    else:
+        return {
+            "emoji": "😤",
+            "greeting": "...",
+            "response": "Quoi ?",
+            "confused": "...",
+            "help": "Laisse-moi tranquille.
+            "help": "Parle clairement."
+        }
+    else:
+        return {
+            "emoji": "😤",
+            "greeting": "...",
+            "response": "Quoi ?",
+            "confused": "...",
+            "help": "Laisse-moi tranquille."
+        }
             "help": "Parle clairement."
         }
     else:
