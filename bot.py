@@ -59,7 +59,7 @@ def update_friendliness(user_id: int, change: int):
  friendliness_score[user_id] = new_score
  print(f"[Friendliness] {user_id}: {current} → {new_score}")
 
-def get_bot_tone(score: int) -> dict:
+
 def get_bot_tone(score: int) -> dict:
     """Retourne le ton du bot selon le score"""
     if score >= 80:
