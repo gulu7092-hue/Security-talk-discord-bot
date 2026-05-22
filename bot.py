@@ -100,6 +100,15 @@ def get_bot_tone(score: int) -> dict:
             "greeting": "...",
             "response": "Quoi ?",
             "confused": "...",
+            "help": "Laisse-moi tranquille."
+        }
+        }
+    else:
+        return {
+            "emoji": "😤",
+            "greeting": "...",
+            "response": "Quoi ?",
+            "confused": "...",
             "help": "Laisse-moi tranquille.
             "help": "Parle clairement."
         }
