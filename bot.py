@@ -61,38 +61,48 @@ def update_friendliness(user_id: int, change: int):
 
 def get_bot_tone(score: int) -> dict:
  """Retourne le ton du bot selon le score"""
- if score >= 80:
- return {
- "emoji": "😊",
- "greeting": "👋 Bonjour",
- "response": "Bien sûr !",
- "confused": "Hmm, je ne comprends pas... 🤔",
- "help": "Je suis là pour t'aider ! 💪"
- }
- elif score >= 60:
- return {
- "emoji": "😐",
- "greeting": "Salut",
- "response": "D'accord",
- "confused": "Je ne comprends pas.",
- "help": "Je peux t'aider."
- }
- elif score >= 40:
- return {
- "emoji": "😑",
- "greeting": "Yo",
- "response": "Ok",
- "confused": "Pas compris.",
- "help": "Dis-moi ce que tu veux."
- }
- elif score >= 20:
- return {
- "emoji": "😠",
- "greeting": "Quoi",
- "response": "Entendu",
- "confused": "Noté.",
- "help": "Parle clairement."
- }
+def get_bot_tone(score: int) -> dict:
+    """Retourne le ton du bot selon le score"""
+    if score >= 80:
+        return {
+            "emoji": "😊",
+            "greeting": "👋 Bonjour",
+            "response": "Bien sûr !",
+            "confused": "Hmm, je ne comprends pas... 🤔",
+            "help": "Je suis là pour t'aider ! 💪"
+        }
+    elif score >= 60:
+        return {
+            "emoji": "😐",
+            "greeting": "Salut",
+            "response": "D'accord",
+            "confused": "Je ne comprends pas.",
+            "help": "Je peux t'aider."
+        }
+    elif score >= 40:
+        return {
+            "emoji": "😑",
+            "greeting": "Yo",
+            "response": "Ok",
+            "confused": "Pas compris.",
+            "help": "Dis-moi ce que tu veux."
+        }
+    elif score >= 20:
+        return {
+            "emoji": "😠",
+            "greeting": "Quoi",
+            "response": "Entendu",
+            "confused": "Noté.",
+            "help": "Parle clairement."
+        }
+    else:
+        return {
+            "emoji": "😤",
+            "greeting": "...",
+            "response": "Quoi ?",
+            "confused": "...",
+            "help": "Laisse-moi tranquille."
+        }
  else:
  return {
  "emoji": "😤",
